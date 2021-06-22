@@ -10,6 +10,7 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.example.santander_dev_week.R
 import com.example.santander_dev_week.data.Conta
+import java.lang.RuntimeException
 
 class MainActivity : AppCompatActivity() {
 
@@ -22,6 +23,8 @@ class MainActivity : AppCompatActivity() {
 
         mainViewModel = ViewModelProvider(this).get(MainViewModel::class.java)
         buscarContaCliente()
+
+//        throw RuntimeException("Test Crash") //Force a crash
     }
 
     private fun buscarContaCliente(){
